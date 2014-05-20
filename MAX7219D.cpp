@@ -1,7 +1,7 @@
-/* 
+/*
  * File:   MAX7219D.cpp
  * Author: mismatch
- * 
+ *
  * Created on May 9, 2014, 12:21 AM
  */
 
@@ -204,7 +204,7 @@ void MAX7219D::yellow(uint8_t to) {
 void MAX7219D::green(uint8_t to) {
     n[0] = (to == true) ? n[0] | (1 << 7) : n[0] & ~(1 << 7);
     _b.g = to;
-    sOut(A_D00, n[2]);
+    sOut(A_D00, n[0]);
 }
 
 void MAX7219D::test() {
